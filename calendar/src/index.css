@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* general */
+
+.calendar {
+  margin: 0 auto 0;
+  width: 1400px;
+}
+
+.calendar .wrap {
+  padding: 0 10px;
+}
+
+.currentYear {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  text-align: center;
+  color: #000000;
+  padding: 40px 0 0 0;
+  margin: 0 auto 80px;
+}
+
+/* controls  */
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px 100px 50px 100px;
+}
+
+.controls .btn {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  background-color: #1e77ac;
+  padding: 13px 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* year  */
+
+.year {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 -10px;
+}
+
+/* months */
+
+.month {
+  border-radius: 15px;
+  background: #F6F8F8;
+  width: 25%;
+  height: 300px;
+  margin: 0 30px 20px 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.singleCol .month {
+  width: 100%;
+}
+
+.twoCol .month {
+  width: 50%;
+}
+
+.monthName {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  text-align: center;
+  color: #000000;
+  padding: 0;
+  margin: 0 auto 20px;
+}
+
+.month .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* days */
+
+.day {
+  width: 14.166666666666667%;
+  text-align: center;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.dayOfTheWeek .day {
+  font-weight: 800;
+}
+
+.booked {
+  background-color: #42a8c4;
+  color: #ffffff;
+}
+
+.isLateCheckout {
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.isLateCheckout > span {
+  background: white;
+  color: #5a4fa0;
+  padding: 0px 3px;
+}
+
+.isLateCheckout > span::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(248, 80, 50, 1);
+  background:linear-gradient(to bottom right,#5a4fa0 50%,transparent 50%);
+  z-index: -1;
+}
+
+/* key */
+
+.key {
+  display: flex;
+  flex-direction: row;
+  margin: 0 absolute
+}
+
+.key .type {
+  margin: 0 10px 0 0;
+}
+
+.key .type span {
+  position: relative;
+  display: flex;
+  line-height: 30px;
+}
+
+.key .type span::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+}
+
+.bookedType span::before {
+  background: #42a8c4;
+}
+
+.lateCheckoutType span::before {
+  background: rgba(248, 80, 50, 1);
+  background:linear-gradient(to bottom right,#5a4fa0 50%,transparent 50%);
+}
+
+/* responsive */
+
+@media (max-width: 980px) {
+  .month {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .month,
+  .twoCol .month {
+    width: 50%;
+  }
+}
+
+
