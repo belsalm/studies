@@ -81,11 +81,3 @@ def get_products():
         product_list.append(product_data)
     
     return jsonify(product_list)
-
-# Definir uma rota raiz (Página inicial) e a função que será executada ao  requisitar
-@app.route('/test', methods=["GET"]) 
-def hello_world():
-    return "Hello World"
-
-if __name__ == "__main__":
-    app.run(debug=True)
